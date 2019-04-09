@@ -31,33 +31,37 @@ export default class TestContext extends Component {
           backgroundColor
         }}
       >
-        <p>这个页面测试context</p>
+        <div className="card">
+          <p>这个页面测试context</p>
 
-        <div style={{ padding: "10px", marginBottom: "10px" }}>
-          <label htmlFor="color">
-            color:
-            <input
-              defaultValue={color}
-              ref={this.colorInput}
-              type="text"
-              name="color"
-            />
-          </label>
-          <label htmlFor="backgroundColor">
-            background color:
-            <input
-              ref={this.backgroundColorInput}
-              defaultValue={backgroundColor}
-              type="text"
-              name="backgroundColor"
-            />
-          </label>
-          <button onClick={this.changeTheme} type="button">
-            改变样式
-          </button>
+          <div style={{ padding: "10px", marginBottom: "10px" }}>
+            <label htmlFor="color">
+              字体色：
+              <input
+                defaultValue={color}
+                ref={this.colorInput}
+                type="text"
+                name="color"
+              />
+            </label>
+            <br />
+            <label htmlFor="backgroundColor">
+              背景色：
+              <input
+                ref={this.backgroundColorInput}
+                defaultValue={backgroundColor}
+                type="text"
+                name="backgroundColor"
+              />
+            </label>
+            <br />
+            <button onClick={this.changeTheme} type="button">
+              改变样式
+            </button>
+          </div>
+
+          <MiddleComponent />
         </div>
-
-        <MiddleComponent />
       </ThemeContext.Provider>
     );
   }

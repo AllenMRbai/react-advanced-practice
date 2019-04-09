@@ -1,4 +1,4 @@
-import React, { Component, Suspense, Fragment } from "react";
+import React, { Component, Suspense } from "react";
 import DynamicImport, { toDynamic } from "../components/lazy/DynamicImport.jsx";
 
 const LazyProducts = React.lazy(() => importProducts());
@@ -35,7 +35,7 @@ export default class TestLazyLoad extends Component {
   render() {
     const { component: Component } = this.state;
     return (
-      <Fragment>
+      <div className="card">
         <p>这里展示了各种姿势实现lazy load</p>
 
         {Component ? (
@@ -87,7 +87,7 @@ export default class TestLazyLoad extends Component {
           />
         </Suspense>
         <br />
-      </Fragment>
+      </div>
     );
   }
 }

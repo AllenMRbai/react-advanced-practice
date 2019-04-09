@@ -5,15 +5,17 @@ import UserCenter from "../components/HOC/UserCenter.jsx";
 export default class TestHOC extends Component {
   render() {
     return (
-      <AppContext.Provider
-        value={{
-          user: "allen",
-          id: "147",
-          hobby: "painting"
-        }}
-      >
-        <UserCenter />
-      </AppContext.Provider>
+      <div className="card">
+        <AppContext.Provider
+          value={{
+            user: "allen",
+            id: "147",
+            hobby: "painting"
+          }}
+        >
+          <UserCenter />
+        </AppContext.Provider>
+      </div>
     );
   }
 }

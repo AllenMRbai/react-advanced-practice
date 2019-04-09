@@ -26,7 +26,7 @@ export default class TestForwardRef extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card">
         <p>测试ref转发</p>
         <div className="card">
           <p className="tip">
