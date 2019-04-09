@@ -9,6 +9,7 @@ const links = [
   { to: "/context", name: "context" },
   { to: "/forwardRef", name: "forward ref" },
   { to: "/HOC", name: "HOC" },
+  { to: "/portals", name: "portals" },
   { to: "/hooks", name: "hooks" },
   { to: "/cache", name: "cache component" }
 ];

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Counter from "../components/hooks/Counter";
 
 export default class TestHooks extends Component {
   render() {
     return (
       <div>
-        <h1>这是TestHooks</h1>
+        <Counter />
       </div>
     );
   }

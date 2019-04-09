@@ -18,6 +18,9 @@ const TestErrorBoundary = React.lazy(
 const TestHOC = React.lazy(slowNet(() => import("../tests/TestHOC.jsx")));
 const TestHooks = React.lazy(slowNet(() => import("../tests/TestHooks.jsx")));
 const TestCache = React.lazy(slowNet(() => import("../tests/TestCache.jsx")));
+const TestPortals = React.lazy(
+  slowNet(() => import("../tests/TestPortals.jsx"))
+);
 
 // 页面加载中提示文字
 function PageLoading() {
@@ -61,6 +64,10 @@ const routes = [
   {
     path: "/hooks",
     component: TestHooks
+  },
+  {
+    path: "/portals",
+    component: TestPortals
   },
   {
     path: "/cache",
